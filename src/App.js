@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Logo from "./namaste-icon.svg";
 
-const App = ({ name }) => {
+const App = () => {
   const [Loader, setLoader] = useState(null);
 
   const startLoader = async () => {
@@ -18,7 +18,7 @@ const App = ({ name }) => {
   return (
     <div id="app">
       <img src={Logo} alt="" />
-      <h1>{`Welcome, ${name}!`}</h1>
+      <h1>Hey! Nice to meet you!</h1>
       <h2>This is your webpack starter...</h2>
       <button onClick={startLoader}>Start loader</button>
       {Loader ? Loader : null}
